@@ -1,54 +1,49 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { SearchBar } from '../../components/SearchBar';
-import { Colors } from '../../theme/Colors';
-import { useState } from 'react';
-import { TransactionItem } from './TransactionItem';
-import { TransactionItemSkeleton } from './TransactionItemSkeleton';
-import { TransactionTypeFilter } from './TransactionTypeFilter';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { FlashList } from '@shopify/flash-list';
+import { Transaction } from '../../model/Transaction';
+import { TransactionItem } from './transactionItem/TransactionItem';
+import { TransactionItemSkeleton } from './transactionItem/TransactionItemSkeleton';
 
-export function TransactionListScreen() {
-  const [merchant, setMerchant] = useState<string>();
+interface TransactionListProps {
+  transactions: Transaction[];
+  loading?: boolean;
+}
+
+export function TransactionList({
+  transactions,
+  loading = false,
+}: TransactionListProps) {
+  if (loading) {
+    return (
+      <>
+        <TransactionItemSkeleton />
+        <TransactionItemSkeleton />
+        <TransactionItemSkeleton />
+      </>
+    );
+  }
+
+  const renderItem = ({ item }: { item: Transaction }) => (
+    <TransactionItem transaction={item} />
+  );
+
+  const renderSkeleton = () => <TransactionItemSkeleton />;
+
   return (
-    <View style={styles.container}>
-      <SearchBar
-        placeholder="Search for merchant..."
-        onSearch={text => {
-          console.log(text);
-          setMerchant(text);
-        }}
-      />
-      <Text>{`Search: ${merchant}`}</Text>
-      <TransactionTypeFilter />
-      <TransactionItem
-        transaction={{
-          id: '51d39989-786f-4d27-9e36-100c60a0e4d4',
-          merchant: 'Gym',
-          amount: -3596.56,
-          date: '2026-02-27T22:42:27Z',
-          category: 'General',
-          type: 'expense',
-        }}
-      />
-      <TransactionItem
-        transaction={{
-          id: 'a2fcaa9b-db56-4f97-b6f4-c808a2657783',
-          merchant: 'Electricity',
-          amount: 4135.18,
-          date: '2026-01-06T01:53:32Z',
-          category: 'Refund',
-          type: 'income',
-        }}
-      />
-      <TransactionItemSkeleton />
-    </View>
+    <FlashList
+      data={loading ? [] : transactions}
+      renderItem={renderItem}
+      keyExtractor={item => item.id}
+      showsVerticalScrollIndicator={false}
+      ListEmptyComponent={loading ? renderSkeleton : null}
+      contentContainerStyle={styles.listContent}
+    />
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    gap: 16,
-    backgroundColor: Colors.neutral,
+  listContent: {
+    paddingBottom: 20,
   },
 });

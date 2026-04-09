@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Colors } from '../../theme/Colors';
 import { Tab } from '../../components/tab';
+import { Colors } from '../../theme/Colors';
 
 type TransactionsTypes = 'All' | 'Incomes' | 'Expenses';
 

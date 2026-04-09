@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Transaction } from '../../model/Transaction';
-import { Colors } from '../../theme/Colors';
-import { formatDate } from '../../utils/formatDate';
-import { formatCurrency } from '../../utils/formatCurrency';
+import { Transaction } from '../../../model/Transaction';
+import { Colors } from '../../../theme/Colors';
+import { formatDate } from '../../../utils/formatDate';
+import { formatCurrency } from '../../../utils/formatCurrency';
 
 interface TransactionItemProps {
   transaction: Transaction;
@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
   date: {
     fontSize: 14,
     color: '#666',
+    width: 48,
   },
   merchant: {
     fontSize: 16,

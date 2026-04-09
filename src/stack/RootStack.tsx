@@ -2,9 +2,9 @@ import {
   createNativeStackNavigator,
   NativeStackNavigationProp,
 } from '@react-navigation/native-stack';
-import { HomeScreen } from '../screens/home/Home';
-import { TransactionListScreen } from '../screens/transactions/TransactionList';
 import { createStaticNavigation } from '@react-navigation/native';
+import { HomeScreen } from '../screens/home/Home';
+import { TransactionHistoryScreen } from '../screens/transactions/TransactionHistoryScreen';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -25,7 +25,7 @@ export const RootStack = createNativeStackNavigator({
         headerShown: false,
       },
     },
-    Transactions: TransactionListScreen,
+    Transactions: TransactionHistoryScreen,
   },
 });
 
