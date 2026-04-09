@@ -8,7 +8,7 @@ import {
 } from './TransactionTypeFilter';
 import { TransactionList } from './TransactionList';
 import { useTransactions } from '../../hooks/useTransactions';
-import { Transaction } from '../../model/Transaction';
+import { filterTransactions } from './filterTransactions';
 import { TransactionError } from './TransactionError';
 
 export function TransactionHistoryScreen() {
@@ -19,29 +19,15 @@ export function TransactionHistoryScreen() {
   const [selectedFilter, setSelectedFilter] =
     useState<TransactionsTypes>('All');
 
-  const filteredTransactions = useMemo(() => {
-    if (!data) return [];
-
-    const searchTerm = merchant?.trim().toLowerCase() ?? '';
-
-    let filtered = data;
-
-    if (selectedFilter !== 'All') {
-      const transactionType =
-        selectedFilter === 'Incomes' ? 'income' : 'expense';
-      filtered = filtered.filter(
-        (transaction: Transaction) => transaction.type === transactionType,
-      );
-    }
-
-    if (searchTerm.length > 0) {
-      filtered = filtered.filter(transaction =>
-        transaction.merchant.toLowerCase().includes(searchTerm),
-      );
-    }
-
-    return filtered;
-  }, [data, selectedFilter, merchant]);
+  const filteredTransactions = useMemo(
+    () =>
+      filterTransactions({
+        data,
+        filterType: selectedFilter,
+        searchText: merchant,
+      }),
+    [data, selectedFilter, merchant],
+  );
 
   if (isError) {
     return <TransactionError message={error.message} onRetry={refetch} />;
