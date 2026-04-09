@@ -14,7 +14,7 @@ export function HomeScreen() {
         <Pressable
           style={styles.button}
           onPress={() => {
-            navigation.navigate('History');
+            navigation.navigate('Transactions');
           }}
         >
           <Text style={styles.buttonText}>Transactions history</Text>

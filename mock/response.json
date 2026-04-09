@@ -1,0 +1,402 @@
+[
+  {
+    "id": "51d39989-786f-4d27-9e36-100c60a0e4d4",
+    "merchant": "Gym",
+    "amount": -3596.56,
+    "date": "2026-02-27T22:42:27Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "00674038-48fd-4441-a46f-0f05c5e7ff62",
+    "merchant": "Gym",
+    "amount": -2299.67,
+    "date": "2026-01-09T20:20:32Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "a2fcaa9b-db56-4f97-b6f4-c808a2657783",
+    "merchant": "Electricity",
+    "amount": 4135.18,
+    "date": "2026-01-06T01:53:32Z",
+    "category": "Refund",
+    "type": "income"
+  },
+  {
+    "id": "5311ccad-58fc-4f03-8ce6-37f399daacdb",
+    "merchant": "Dividend",
+    "amount": 2833.74,
+    "date": "2026-02-22T20:56:55Z",
+    "category": "Income",
+    "type": "income"
+  },
+  {
+    "id": "8b84baf3-fad3-49d3-8527-a8ca7efb9cc2",
+    "merchant": "Apple",
+    "amount": 2106.03,
+    "date": "2026-02-27T15:26:08Z",
+    "category": "Refund",
+    "type": "income"
+  },
+  {
+    "id": "eeade6fe-20b1-4d04-be4d-460251b259c8",
+    "merchant": "Airbnb",
+    "amount": -4565.44,
+    "date": "2026-01-19T04:16:16Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "5caeea82-300c-40dd-840b-9acede3201b6",
+    "merchant": "Pharmacy",
+    "amount": -113.85,
+    "date": "2026-01-25T14:35:42Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "a2a4fe0c-27f4-45ac-a9f3-8952fb64d433",
+    "merchant": "Investment",
+    "amount": 383.43,
+    "date": "2026-03-07T20:05:17Z",
+    "category": "Refund",
+    "type": "income"
+  },
+  {
+    "id": "a7b6a630-293b-45f1-b23c-85cf05dd93cf",
+    "merchant": "Pet Shop",
+    "amount": -2413.34,
+    "date": "2026-01-18T03:37:16Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "1f385ceb-c22a-41e2-ab22-46f047c28fed",
+    "merchant": "Dividend",
+    "amount": 9316.21,
+    "date": "2026-01-08T12:08:25Z",
+    "category": "Income",
+    "type": "income"
+  },
+  {
+    "id": "2099c4b1-5790-4436-960e-faf0102b2f10",
+    "merchant": "Taxi",
+    "amount": -4584.74,
+    "date": "2026-03-24T03:27:14Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "2c0a6a40-8ce0-47ef-ac2e-408174191828",
+    "merchant": "Investment",
+    "amount": 2768.59,
+    "date": "2026-02-03T13:24:42Z",
+    "category": "Refund",
+    "type": "income"
+  },
+  {
+    "id": "b53fbe56-b785-4f8e-888c-f20018af84b0",
+    "merchant": "Google Ads",
+    "amount": -4878.81,
+    "date": "2026-01-14T02:52:52Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "d429090e-ea2e-4e70-99e7-b3beaea336d2",
+    "merchant": "Bank",
+    "amount": -3003.42,
+    "date": "2026-03-09T13:58:07Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "2aebe46d-9641-4b8d-adda-e97f381f99f8",
+    "merchant": "Airbnb",
+    "amount": 529.05,
+    "date": "2026-02-03T01:55:41Z",
+    "category": "Refund",
+    "type": "income"
+  },
+  {
+    "id": "3d6b7e9d-e2fc-4e0f-b198-b1bc61c7b569",
+    "merchant": "Freelance",
+    "amount": 4792.96,
+    "date": "2026-02-23T01:30:16Z",
+    "category": "Refund",
+    "type": "income"
+  },
+  {
+    "id": "1ce82c0c-15f2-412e-b7b8-e14b687feed8",
+    "merchant": "Uber",
+    "amount": 43.17,
+    "date": "2026-01-14T12:46:04Z",
+    "category": "Refund",
+    "type": "income"
+  },
+  {
+    "id": "9dd235af-fcdb-4611-a3ba-444b35b1bdba",
+    "merchant": "Netflix",
+    "amount": -3752.93,
+    "date": "2026-03-06T20:18:20Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "511a1c48-225f-4da7-b0e3-aaf0bf95fa6d",
+    "merchant": "Electricity",
+    "amount": -3731.97,
+    "date": "2026-01-24T18:11:18Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "e2a81a9d-69cb-44d2-ab35-dc25a6942cfb",
+    "merchant": "Salary",
+    "amount": 9885.74,
+    "date": "2026-04-03T02:36:52Z",
+    "category": "Income",
+    "type": "income"
+  },
+  {
+    "id": "d355d8e8-4786-4123-ba7e-27ab4d9b8d54",
+    "merchant": "Bookstore",
+    "amount": -3058.41,
+    "date": "2026-02-24T08:16:04Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "61c66c6e-81be-4149-9410-a7cff7eefedb",
+    "merchant": "Investment",
+    "amount": 4434.43,
+    "date": "2026-03-06T15:44:09Z",
+    "category": "Refund",
+    "type": "income"
+  },
+  {
+    "id": "1068e52f-8817-4031-bea5-433adf34b197",
+    "merchant": "Uber",
+    "amount": 2511.66,
+    "date": "2026-02-01T03:26:08Z",
+    "category": "Refund",
+    "type": "income"
+  },
+  {
+    "id": "99e3c030-62d9-4708-b1ef-21d5eb454b01",
+    "merchant": "Netflix",
+    "amount": -2843.26,
+    "date": "2026-02-14T03:45:52Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "cfe4fa70-86d2-4ea4-a2d5-8f34ebff49b5",
+    "merchant": "Bank",
+    "amount": -3454.83,
+    "date": "2026-01-13T04:16:56Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "ebb8d318-4faa-479e-ae1b-efe2b82ba6ee",
+    "merchant": "Uber",
+    "amount": -4834.25,
+    "date": "2026-01-13T02:52:39Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "9f22611f-6d26-4a1d-889a-a3d6d25c5619",
+    "merchant": "Freelance",
+    "amount": 2127.66,
+    "date": "2026-04-03T12:30:25Z",
+    "category": "Refund",
+    "type": "income"
+  },
+  {
+    "id": "9b364f6a-3d4a-4fde-acce-a37917436882",
+    "merchant": "Taxi",
+    "amount": -721.29,
+    "date": "2026-02-02T10:21:42Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "aebd9b37-b507-4040-8a8e-1b4d27220b94",
+    "merchant": "Cashback",
+    "amount": 427.51,
+    "date": "2026-01-19T15:39:37Z",
+    "category": "Income",
+    "type": "income"
+  },
+  {
+    "id": "68b6c3f2-4c32-40de-b9ed-967ac9c71f67",
+    "merchant": "Airbnb",
+    "amount": -2334.28,
+    "date": "2026-03-19T08:19:20Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "a6179e8f-2ac3-42b3-9757-d0d72ef85792",
+    "merchant": "Taxi",
+    "amount": -526.86,
+    "date": "2026-04-01T22:59:01Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "6fa784e7-09e2-4380-8f7f-646d66f80202",
+    "merchant": "Supermarket",
+    "amount": -4177.75,
+    "date": "2026-03-17T06:05:02Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "67c2f0c7-9b2c-4ec7-a517-02f5c653dd05",
+    "merchant": "Google Ads",
+    "amount": -1966.61,
+    "date": "2026-03-24T17:44:51Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "ea67c89f-a254-4671-888f-b00d717e82b4",
+    "merchant": "Pet Shop",
+    "amount": -2184.37,
+    "date": "2026-02-24T07:29:11Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "128e65e9-439f-438e-a6cc-ed070111f707",
+    "merchant": "Salary",
+    "amount": 8838.94,
+    "date": "2026-03-29T13:50:46Z",
+    "category": "Income",
+    "type": "income"
+  },
+  {
+    "id": "787f34b0-1469-47ed-87f4-fd12b2c6e451",
+    "merchant": "Salary",
+    "amount": 7396.32,
+    "date": "2026-01-14T18:11:58Z",
+    "category": "Income",
+    "type": "income"
+  },
+  {
+    "id": "6f6b5fba-9255-4beb-bf14-7556961f677d",
+    "merchant": "Coffee Shop",
+    "amount": -3892.82,
+    "date": "2026-01-01T12:36:09Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "7f075a2b-53b4-4923-9810-44ded9db834e",
+    "merchant": "Coffee Shop",
+    "amount": -3908.51,
+    "date": "2026-02-13T16:25:43Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "a194be66-0dff-4c40-8316-b3d8585cb1ed",
+    "merchant": "Bank",
+    "amount": -1672.34,
+    "date": "2026-01-20T16:48:50Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "af1c795d-1c92-4fbc-934f-0139e26086fc",
+    "merchant": "iFood",
+    "amount": -3359.58,
+    "date": "2026-02-07T18:03:00Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "9d8e0bab-7523-4408-bb28-06b72a1f9262",
+    "merchant": "Airbnb",
+    "amount": 164.01,
+    "date": "2026-04-04T02:16:51Z",
+    "category": "Refund",
+    "type": "income"
+  },
+  {
+    "id": "60a12cd3-bf2e-4655-ac7e-c715f65980d6",
+    "merchant": "Gym",
+    "amount": -2101.4,
+    "date": "2026-02-06T04:37:59Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "7b639503-fc58-4d0a-aef9-c083c6e1f4d3",
+    "merchant": "Airbnb",
+    "amount": -305.7,
+    "date": "2026-01-13T04:59:08Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "1b028b8e-996d-443f-90bd-e1e0ac213cd6",
+    "merchant": "Bank",
+    "amount": -620.92,
+    "date": "2026-03-10T11:05:53Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "7426b524-ba13-432f-aa4f-02c524b53d20",
+    "merchant": "Taxi",
+    "amount": -3732.05,
+    "date": "2026-01-20T00:49:14Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "7b5c0020-11a1-4599-bac3-d7bdc0681403",
+    "merchant": "Coffee Shop",
+    "amount": -855.52,
+    "date": "2026-03-15T11:34:33Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "0935b44a-bf70-469c-b87b-c80fc72790d6",
+    "merchant": "Taxi",
+    "amount": -1770.41,
+    "date": "2026-03-27T21:28:47Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "943e1438-9207-4c68-9d93-54ef6d99aee1",
+    "merchant": "Google Ads",
+    "amount": -864.8,
+    "date": "2026-01-21T21:35:39Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "9bd6e8a2-0722-468e-96c4-f3a4419bff74",
+    "merchant": "Pet Shop",
+    "amount": -1654.19,
+    "date": "2026-03-12T10:29:21Z",
+    "category": "General",
+    "type": "expense"
+  },
+  {
+    "id": "2d7f41d0-9f62-4c96-bc71-c8bde9962db8",
+    "merchant": "Airbnb",
+    "amount": 2395.8,
+    "date": "2026-01-24T06:32:12Z",
+    "category": "Refund",
+    "type": "income"
+  }
+]
