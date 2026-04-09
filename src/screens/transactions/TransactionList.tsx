@@ -5,6 +5,7 @@ import { Transaction } from '../../model/Transaction';
 import { TransactionItem } from './item/TransactionItem';
 import { TransactionItemSkeleton } from './item/TransactionItemSkeleton';
 import { Colors } from '../../theme/Colors';
+import { EmptyState } from '../../components/EmptyState';
 
 interface TransactionListProps {
   transactions?: Transaction[];
@@ -33,7 +34,12 @@ export function TransactionList({
     <TransactionItem transaction={item} />
   );
 
-  const renderSkeleton = () => <TransactionItemSkeleton />;
+  const renderEmptyState = () => (
+    <EmptyState
+      title="No transactions found"
+      message="Your transaction history will appear here once you start making transactions."
+    />
+  );
 
   return (
     <FlashList
@@ -41,7 +47,7 @@ export function TransactionList({
       renderItem={renderItem}
       keyExtractor={item => item.id}
       showsVerticalScrollIndicator={false}
-      ListEmptyComponent={loading ? renderSkeleton : null}
+      ListEmptyComponent={renderEmptyState}
       contentContainerStyle={styles.listContent}
       refreshControl={
         <RefreshControl
