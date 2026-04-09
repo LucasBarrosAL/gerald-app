@@ -4,6 +4,7 @@ import { Colors } from '../../theme/Colors';
 import { useState } from 'react';
 import { TransactionItem } from './TransactionItem';
 import { TransactionItemSkeleton } from './TransactionItemSkeleton';
+import { TransactionTypeFilter } from './TransactionTypeFilter';
 
 export function TransactionListScreen() {
   const [merchant, setMerchant] = useState<string>();
@@ -17,6 +18,7 @@ export function TransactionListScreen() {
         }}
       />
       <Text>{`Search: ${merchant}`}</Text>
+      <TransactionTypeFilter />
       <TransactionItem
         transaction={{
           id: '51d39989-786f-4d27-9e36-100c60a0e4d4',
