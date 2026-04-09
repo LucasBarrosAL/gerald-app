@@ -1,6 +1,6 @@
-import { filterTransactions } from '../src/screens/transactions/filterTransactions';
-import { Transaction } from '../src/model/Transaction';
-import mockTransactions from '../mock/response';
+import { filterTransactions } from '../filterTransactions';
+import { Transaction } from '../../../model/Transaction';
+import mockTransactions from '../../../../mock/response';
 
 describe('filterTransactions', () => {
   const transactions: Transaction[] = mockTransactions as Transaction[];

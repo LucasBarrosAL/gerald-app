@@ -1,4 +1,4 @@
-import { formatCurrency } from '../src/utils/formatCurrency';
+import { formatCurrency } from '../formatCurrency';
 
 import * as RNLocalize from 'react-native-localize';
 

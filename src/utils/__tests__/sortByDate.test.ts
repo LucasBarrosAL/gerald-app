@@ -1,5 +1,5 @@
-import { sortByDate } from '../src/utils/sortByDate';
-import { Transaction } from '../src/model/Transaction';
+import { sortByDate } from '../sortByDate';
+import { Transaction } from '../../model/Transaction';
 
 describe('sortByDate', () => {
   const mockTransactions: Transaction[] = [
