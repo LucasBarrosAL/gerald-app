@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Tab } from '../../components/tab';
+import { Tab } from '../../components/Tab';
 import { Colors } from '../../theme/Colors';
 
 export type TransactionsTypes = 'All' | 'Incomes' | 'Expenses';

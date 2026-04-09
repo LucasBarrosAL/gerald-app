@@ -1,4 +1,3 @@
-import React from 'react';
 import { RefreshControl, StyleSheet } from 'react-native';
 import { FlashList } from '@shopify/flash-list';
 import { Transaction } from '../../model/Transaction';

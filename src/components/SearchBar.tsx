@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 import Icon from '@react-native-vector-icons/feather';
 import { Colors } from '../theme/Colors';
