@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { FlashList } from '@shopify/flash-list';
 import { Transaction } from '../../model/Transaction';
-import { TransactionItem } from './transactionItem/TransactionItem';
-import { TransactionItemSkeleton } from './transactionItem/TransactionItemSkeleton';
+import { TransactionItem } from './item/TransactionItem';
+import { TransactionItemSkeleton } from './item/TransactionItemSkeleton';
 
 interface TransactionListProps {
   transactions?: Transaction[];
