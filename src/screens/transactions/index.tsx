@@ -1,7 +1,7 @@
 import { StyleSheet, View } from 'react-native';
+import { useState, useMemo } from 'react';
 import { SearchBar } from '../../components/SearchBar';
 import { Colors } from '../../theme/Colors';
-import { useState, useMemo } from 'react';
 import {
   TransactionsTypes,
   TransactionTypeFilter,
