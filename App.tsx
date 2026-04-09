@@ -1,13 +1,15 @@
 import { StatusBar } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Navigation } from './src/stack/RootStack';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <SafeAreaProvider>
+    <QueryClientProvider client={queryClient}>
       <StatusBar />
       <Navigation />
-    </SafeAreaProvider>
+    </QueryClientProvider>
   );
 }
 

@@ -6,7 +6,7 @@ import { TransactionItem } from './transactionItem/TransactionItem';
 import { TransactionItemSkeleton } from './transactionItem/TransactionItemSkeleton';
 
 interface TransactionListProps {
-  transactions: Transaction[];
+  transactions?: Transaction[];
   loading?: boolean;
 }
 
@@ -32,7 +32,7 @@ export function TransactionList({
 
   return (
     <FlashList
-      data={loading ? [] : transactions}
+      data={transactions || []}
       renderItem={renderItem}
       keyExtractor={item => item.id}
       showsVerticalScrollIndicator={false}
