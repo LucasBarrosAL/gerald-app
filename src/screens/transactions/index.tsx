@@ -11,7 +11,7 @@ import { useTransactions } from '../../hooks/useTransactions';
 import { Transaction } from '../../model/Transaction';
 
 export function TransactionHistoryScreen() {
-  const { data, isLoading, isError, refetch } = useTransactions();
+  const { data, isLoading, isFetching, isError, refetch } = useTransactions();
 
   const [merchant, setMerchant] = useState<string>();
   const [selectedFilter, setSelectedFilter] =
@@ -68,6 +68,8 @@ export function TransactionHistoryScreen() {
       <TransactionList
         transactions={filteredTransactions}
         loading={isLoading}
+        isRefreshing={!isLoading && isFetching}
+        onRefresh={refetch}
       />
     </View>
   );
