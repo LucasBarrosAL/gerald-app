@@ -3,6 +3,7 @@ import { SearchBar } from '../../components/SearchBar';
 import { Colors } from '../../theme/Colors';
 import { useState } from 'react';
 import { TransactionItem } from './TransactionItem';
+import { TransactionItemSkeleton } from './TransactionItemSkeleton';
 
 export function TransactionListScreen() {
   const [merchant, setMerchant] = useState<string>();
@@ -36,6 +37,7 @@ export function TransactionListScreen() {
           type: 'income',
         }}
       />
+      <TransactionItemSkeleton />
     </View>
   );
 }
