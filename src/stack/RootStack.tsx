@@ -3,8 +3,8 @@ import {
   NativeStackNavigationProp,
 } from '@react-navigation/native-stack';
 import { createStaticNavigation } from '@react-navigation/native';
-import { HomeScreen } from '../screens/home/Home';
-import { TransactionHistoryScreen } from '../screens/transactions/TransactionHistoryScreen';
+import { HomeScreen } from '../screens/home';
+import { TransactionHistoryScreen } from '../screens/transactions';
 
 export type RootStackParamList = {
   Home: undefined;

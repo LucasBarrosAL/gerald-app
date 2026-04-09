@@ -3,11 +3,11 @@ import { StyleSheet, View } from 'react-native';
 import { Tab } from '../../components/tab';
 import { Colors } from '../../theme/Colors';
 
-type TransactionsTypes = 'All' | 'Incomes' | 'Expenses';
+export type TransactionsTypes = 'All' | 'Incomes' | 'Expenses';
 
 interface TransactionTypeFilterProps {
   value?: TransactionsTypes;
-  onChange?: (value: string) => void;
+  onChange?: (value: TransactionsTypes) => void;
 }
 
 const options: TransactionsTypes[] = ['All', 'Incomes', 'Expenses'];

@@ -1,14 +1,32 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { SearchBar } from '../../components/SearchBar';
 import { Colors } from '../../theme/Colors';
-import { useState } from 'react';
-import { TransactionTypeFilter } from './TransactionTypeFilter';
+import { useState, useMemo } from 'react';
+import {
+  TransactionsTypes,
+  TransactionTypeFilter,
+} from './TransactionTypeFilter';
 import { TransactionList } from './TransactionList';
 import { useTransactions } from '../../hooks/useTransactions';
+import { Transaction } from '../../model/Transaction';
 
 export function TransactionHistoryScreen() {
-  const [merchant, setMerchant] = useState<string>();
   const { data, isLoading, isError, refetch } = useTransactions();
+
+  const [merchant, setMerchant] = useState<string>();
+  const [selectedFilter, setSelectedFilter] =
+    useState<TransactionsTypes>('All');
+
+  const filteredTransactions = useMemo(() => {
+    if (!data) return [];
+
+    if (selectedFilter === 'All') return data;
+
+    const transactionType = selectedFilter === 'Incomes' ? 'income' : 'expense';
+    return data.filter(
+      (transaction: Transaction) => transaction.type === transactionType,
+    );
+  }, [data, selectedFilter]);
 
   if (isError) {
     return (
@@ -30,9 +48,15 @@ export function TransactionHistoryScreen() {
           }}
         />
         <Text>{`Search: ${merchant}`}</Text>
-        <TransactionTypeFilter />
+        <TransactionTypeFilter
+          value={selectedFilter}
+          onChange={setSelectedFilter}
+        />
       </View>
-      <TransactionList transactions={data} loading={isLoading} />
+      <TransactionList
+        transactions={filteredTransactions}
+        loading={isLoading}
+      />
     </View>
   );
 }
