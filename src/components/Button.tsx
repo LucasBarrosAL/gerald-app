@@ -8,7 +8,12 @@ interface ButtonProps {
 
 export function Button({ title, onPress }: ButtonProps) {
   return (
-    <Pressable style={styles.button} onPress={onPress}>
+    <Pressable
+      style={styles.button}
+      onPress={onPress}
+      accessibilityLabel={`${title} button`}
+      accessibilityHint={`Press to ${title}`}
+    >
       <Text style={styles.buttonText}>{title}</Text>
     </Pressable>
   );

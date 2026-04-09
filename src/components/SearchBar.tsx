@@ -42,6 +42,8 @@ export function SearchBar({
         placeholderTextColor="gray"
         value={searchText}
         onChangeText={handleChangeText}
+        accessibilityLabel="input"
+        accessibilityHint="Press to search by merchant name"
       />
     </View>
   );

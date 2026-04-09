@@ -15,6 +15,10 @@ export function Tab({ name, selected, onPress }: TabProps) {
         selected ? styles.optionSelected : styles.optionUnselected,
       ]}
       onPress={onPress}
+      accessibilityLabel={`${name} button`}
+      accessibilityHint={
+        selected ? `Filtering ${name}` : `Press to filter by ${name}`
+      }
     >
       <Text
         style={[
