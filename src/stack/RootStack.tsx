@@ -17,7 +17,7 @@ export type HomeScreenNavigationProp = NativeStackNavigationProp<
 >;
 
 export const RootStack = createNativeStackNavigator({
-  initialRouteName: 'Transactions',
+  initialRouteName: 'Home',
   screens: {
     Home: {
       screen: HomeScreen,

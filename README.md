@@ -62,36 +62,69 @@ If everything is set up correctly, you should see your new app running in the An
 
 This is one way to run your app — you can also build it directly from Android Studio or Xcode.
 
-## Step 3: Modify your app
+### Running Tests
 
-Now that you have successfully run the app, let's make changes!
+Run the test suite with Jest:
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+```sh
+npm test
+```
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+# Architecture decisions and reasoning
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+This project was designed with a focus on scalability, maintainability, and user experience, following common patterns used in production-grade React Native applications.
 
-## Congratulations! :tada:
+## Project Structure
 
-You've successfully run and modified your React Native App. :partying_face:
+```
+src/
+├── api/              # Network layer and API abstraction
+├── components/       # Reusable and presentational UI components
+├── hooks/            # Encapsulated logic (data fetching, state, etc.)
+├── screens/          # Screen-level components (composition layer)
+├── model/            # TypeScript interfaces and domain models
+├── theme/            # Centralized design system (colors, spacing)
+├── utils/            # Shared helpers (formatting, etc.)
+└── stack/            # Navigation configuration
+```
 
-### Now what?
+### Reasoning
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+- **Separation of concerns:** each layer has a clear responsibility
+- **Scalability:** easy to grow without creating tight coupling
+- **Testability:** logic is isolated (hooks, utils)
+- **Reusability:** UI components are decoupled from business logic
 
-# Troubleshooting
+### Libraries Overview
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+- **Navigation:** Stack Navigation chosen for simplicity and linear flow, making it easy to maintain. Can be extended with tabs/drawers if needed.
 
-# Learn More
+- **Data Fetching:** TanStack Query handles server state with caching, retries, and background updates, improving UX and scalability.
 
-To learn more about React Native, take a look at the following resources:
+- **List Rendering:** FlashList used for better performance and memory efficiency on large datasets.
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- **UI & Theming:** Centralized `theme/` ensures consistency and easy design evolution.
+
+- **Mocking:** Mock layer simulates latency and errors for realistic development without a backend.
+
+- **Reusability:** Components are small, composable, and mostly stateless (e.g., `EmptyState`, `TransactionTypeFilter`).
+
+- **Testing:** Focus on business logic and critical UI behavior.
+
+- **Scalability:** Structure supports growth, easy refactoring, and seamless transition to real APIs.
+
+## Trade-offs due to time constraint
+
+- **Avoid create a ThemeProvider:** Instead of implementing a complete theming system with a ThemeProvider, only a simple Colors file was created to store color constants.
+- **Styles on the same component file:** Styles were kept in the same file as their respective components. While this reduces file navigation and keeps related code together, it may lead to less reusability and slightly harder maintenance as the project grows.
+- **Folder structure (mainly inside components and screens):** The folder organization was kept intentionally simple, focusing on functional grouping rather than deep modularization. This speeds up development but may not represent the ideal long-term structure for larger projects.
+- **Avoid animations:** Just to make it simple.
+- **Merchant filter implemented without a request:** The merchant filter was implemented by simply filtering an existing array on the client side, rather than making a new request to the backend.
+- **Pagination on the list:** It will increase time to mock real server to pagination, so I decided not include because of time.
+
+# Whats Next?
+
+1. Pagination on transactions history list
+2. UX Improvements (such as add Animations and styling StatusBar on Android)
+3. Theming
+4. Increase unit test coverage
