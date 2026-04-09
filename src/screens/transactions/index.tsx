@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { SearchBar } from '../../components/SearchBar';
 import { Colors } from '../../theme/Colors';
 import { useState, useMemo } from 'react';
@@ -9,9 +9,11 @@ import {
 import { TransactionList } from './TransactionList';
 import { useTransactions } from '../../hooks/useTransactions';
 import { Transaction } from '../../model/Transaction';
+import { TransactionError } from './TransactionError';
 
 export function TransactionHistoryScreen() {
-  const { data, isLoading, isFetching, isError, refetch } = useTransactions();
+  const { data, isLoading, isFetching, isError, error, refetch } =
+    useTransactions();
 
   const [merchant, setMerchant] = useState<string>();
   const [selectedFilter, setSelectedFilter] =
@@ -42,12 +44,7 @@ export function TransactionHistoryScreen() {
   }, [data, selectedFilter, merchant]);
 
   if (isError) {
-    return (
-      <View>
-        <Text>Something went wrong</Text>
-        <Button title="Try again" onPress={() => refetch()} />
-      </View>
-    );
+    return <TransactionError message={error.message} onRetry={refetch} />;
   }
 
   return (

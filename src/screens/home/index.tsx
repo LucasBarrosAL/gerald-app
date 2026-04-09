@@ -1,7 +1,8 @@
 import { useNavigation } from '@react-navigation/native';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../../theme/Colors';
 import { HomeScreenNavigationProp } from '../../stack/RootStack';
+import { Button } from '../../components/Button';
 
 export function HomeScreen() {
   const navigation = useNavigation<HomeScreenNavigationProp>();
@@ -11,14 +12,12 @@ export function HomeScreen() {
         <Text style={styles.title}>Gerald App</Text>
       </View>
       <View style={styles.content}>
-        <Pressable
-          style={styles.button}
+        <Button
+          title="Transactions history"
           onPress={() => {
             navigation.navigate('Transactions');
           }}
-        >
-          <Text style={styles.buttonText}>Transactions history</Text>
-        </Pressable>
+        />
       </View>
     </View>
   );
@@ -42,17 +41,5 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
     paddingTop: 64,
-  },
-  button: {
-    backgroundColor: Colors.white,
-    borderRadius: 24,
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    alignItems: 'center',
-  },
-  buttonText: {
-    fontSize: 16,
-    fontWeight: '700',
-    color: Colors.danger,
   },
 });
