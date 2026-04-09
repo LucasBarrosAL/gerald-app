@@ -20,13 +20,26 @@ export function TransactionHistoryScreen() {
   const filteredTransactions = useMemo(() => {
     if (!data) return [];
 
-    if (selectedFilter === 'All') return data;
+    const searchTerm = merchant?.trim().toLowerCase() ?? '';
 
-    const transactionType = selectedFilter === 'Incomes' ? 'income' : 'expense';
-    return data.filter(
-      (transaction: Transaction) => transaction.type === transactionType,
-    );
-  }, [data, selectedFilter]);
+    let filtered = data;
+
+    if (selectedFilter !== 'All') {
+      const transactionType =
+        selectedFilter === 'Incomes' ? 'income' : 'expense';
+      filtered = filtered.filter(
+        (transaction: Transaction) => transaction.type === transactionType,
+      );
+    }
+
+    if (searchTerm.length > 0) {
+      filtered = filtered.filter(transaction =>
+        transaction.merchant.toLowerCase().includes(searchTerm),
+      );
+    }
+
+    return filtered;
+  }, [data, selectedFilter, merchant]);
 
   if (isError) {
     return (
@@ -47,7 +60,6 @@ export function TransactionHistoryScreen() {
             setMerchant(text);
           }}
         />
-        <Text>{`Search: ${merchant}`}</Text>
         <TransactionTypeFilter
           value={selectedFilter}
           onChange={setSelectedFilter}

@@ -74,6 +74,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     textAlign: 'right',
-    maxWidth: 75,
+    width: 80,
   },
 });
